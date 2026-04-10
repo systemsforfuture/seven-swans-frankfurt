@@ -3,517 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seven Swans Frankfurt — ★ Michelin · 🌿 Grüner Stern · Veganes Fine Dining</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Seven Swans Frankfurt | Michelin-Stern Veganes Fine Dining</title>
+<meta name="description" content="Seven Swans - Frankfurts einzigartiges veganes Sternerestaurant am Mainkai. 1 Michelin-Stern, Michelin Green Star. Küchenchef Ricky Saward.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --teal: #2A7A6A;
-  --teal-light: #3A9A88;
-  --teal-pale: #5ABAA8;
-  --sage: #8AAA8A;
-  --bg: #050908;
-  --bg2: #070C0A;
-  --surface: #0C1310;
-  --surface2: #121A16;
-  --border: rgba(42,122,106,0.22);
-  --border2: rgba(42,122,106,0.1);
-  --text: #EDF2EF;
-  --text2: #9ABAA8;
-  --text3: #5A7A68;
-}
-
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:24px 48px;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s ease;}
-nav.scrolled{padding:14px 48px;background:rgba(5,9,8,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal-light);text-decoration:none;line-height:1.2;}
-.nav-logo span{display:block;font-size:0.55rem;font-weight:300;letter-spacing:0.3em;color:var(--text2);text-transform:uppercase;margin-top:2px;}
-.nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:0.7rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--text2);text-decoration:none;transition:color 0.3s;}
-.nav-links a:hover{color:var(--teal-light);}
-.nav-cta{font-size:0.65rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--bg);background:var(--teal-light);padding:10px 24px;text-decoration:none;transition:all 0.3s;}
-.nav-cta:hover{background:var(--teal-pale);transform:translateY(-1px);}
-
-/* HERO — Main-Ufer Atmosphäre */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:120px 64px 80px;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 80%,rgba(42,122,106,0.08) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 20% 20%,rgba(58,154,136,0.04) 0%,transparent 60%);pointer-events:none;}
-/* Wellen — Main-Ufer */
-.hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 48px,rgba(42,122,106,0.02) 48px,rgba(42,122,106,0.02) 49px);pointer-events:none;}
-.hero-watermark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:50vw;font-weight:300;font-style:italic;color:rgba(42,122,106,0.025);line-height:1;pointer-events:none;user-select:none;white-space:nowrap;}
-.hero-badges{display:flex;gap:12px;margin-bottom:40px;flex-wrap:wrap;position:relative;z-index:2;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:0.62rem;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;border:1px solid var(--border);padding:8px 16px;}
-.badge-michelin{color:var(--teal-light);}
-.badge-green{color:#7AC06A;border-color:rgba(122,192,106,0.25);}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,9rem);font-weight:300;line-height:0.88;letter-spacing:-0.02em;color:var(--text);margin-bottom:28px;position:relative;z-index:2;}
-.hero-title em{font-style:italic;color:var(--teal-light);}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;font-style:italic;color:var(--text2);max-width:520px;line-height:1.7;margin-bottom:48px;position:relative;z-index:2;}
-.hero-actions{display:flex;gap:16px;align-items:center;position:relative;z-index:2;}
-.btn-primary{font-size:0.65rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--bg);background:var(--teal-light);padding:14px 32px;text-decoration:none;transition:all 0.3s;}
-.btn-primary:hover{background:var(--teal-pale);transform:translateY(-2px);}
-.btn-secondary{font-size:0.65rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--text2);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:2px;transition:all 0.3s;}
-.btn-secondary:hover{color:var(--teal-light);border-color:var(--teal-light);}
-.hero-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border2);margin-top:60px;position:relative;z-index:2;}
-.hero-strip-item{padding:20px 0;border-right:1px solid var(--border2);padding-right:24px;}
-.hero-strip-item:last-child{border-right:none;}
-.strip-val{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--teal-light);line-height:1;margin-bottom:4px;}
-.strip-lbl{font-size:0.58rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--text3);}
-
-section{padding:120px 0;}
-.container{max-width:1280px;margin:0 auto;padding:0 64px;}
-.section-eyebrow{font-size:0.6rem;font-weight:500;letter-spacing:0.35em;text-transform:uppercase;color:var(--teal-light);margin-bottom:20px;}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4vw,4rem);font-weight:300;line-height:1.1;letter-spacing:-0.01em;color:var(--text);}
-.section-title em{font-style:italic;color:var(--teal-light);}
-.divider{width:48px;height:1px;background:var(--teal);margin:32px 0;}
-
-/* MANIFESTO */
-.manifesto{background:var(--bg);}
-.manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.manifesto-text{font-size:1rem;color:var(--text2);line-height:1.9;}
-.manifesto-text p+p{margin-top:20px;}
-.manifesto-quote{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;font-style:italic;color:var(--text);line-height:1.4;padding:40px 44px;border:1px solid var(--border);background:var(--surface);position:relative;}
-.manifesto-quote::before{content:'"';position:absolute;top:-20px;left:32px;font-size:5rem;color:var(--teal);line-height:1;font-family:'Cormorant Garamond',serif;}
-.manifesto-chef{margin-top:24px;font-size:0.7rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal-light);}
-
-/* KONZEPT */
-.konzept{background:var(--bg2);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);}
-.konzept-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px;}
-.konzept-card{background:var(--surface);border:1px solid var(--border2);padding:44px 36px;transition:all 0.3s;}
-.konzept-card:hover{background:var(--surface2);border-color:var(--border);}
-.konzept-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--teal);line-height:1;margin-bottom:16px;opacity:0.6;}
-.konzept-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--text);margin-bottom:12px;}
-.konzept-text{font-size:0.82rem;color:var(--text2);line-height:1.7;}
-
-/* MENÜ */
-.menu-section{background:var(--bg);}
-.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:60px;}
-.menu-card{background:var(--surface);border:1px solid var(--border2);padding:48px 44px;transition:all 0.3s;}
-.menu-card.featured{background:var(--surface2);border-color:var(--teal);position:relative;}
-.menu-card.featured::before{content:'SIGNATURE';position:absolute;top:-1px;right:32px;font-size:0.55rem;font-weight:500;letter-spacing:0.25em;color:var(--bg);background:var(--teal-light);padding:5px 14px;}
-.menu-card:hover{border-color:var(--border);transform:translateY(-2px);}
-.menu-card.featured:hover{border-color:var(--teal-pale);}
-.menu-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--text);margin-bottom:8px;}
-.menu-sub{font-size:0.75rem;font-style:italic;color:var(--text3);margin-bottom:20px;font-family:'Cormorant Garamond',serif;}
-.menu-courses{list-style:none;margin-bottom:28px;}
-.menu-courses li{font-size:0.8rem;color:var(--text2);padding:6px 0;border-bottom:1px solid var(--border2);display:flex;align-items:center;gap:8px;}
-.menu-courses li::before{content:'—';color:var(--teal);font-size:0.7rem;}
-.menu-courses li:last-child{border-bottom:none;}
-.menu-price{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--teal-light);}
-
-/* NACHHALTIGKEIT */
-.nachhaltigkeit{background:var(--surface);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:60px 0;}
-.nach-inner{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;}
-.nach-icon{font-size:4rem;line-height:1;color:var(--teal-light);}
-.nach-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--text);margin-bottom:8px;}
-.nach-text{font-size:0.88rem;color:var(--text2);line-height:1.7;max-width:700px;}
-
-/* STATS */
-.stats-bar{background:var(--surface);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:48px 0;}
-.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);}
-.stat-item{text-align:center;padding:20px;border-right:1px solid var(--border2);}
-.stat-item:last-child{border-right:none;}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--teal-light);display:block;line-height:1;margin-bottom:8px;}
-.stat-lbl{font-size:0.6rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--text3);}
-
-/* CONTACT */
-.contact{background:var(--bg2);}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:60px;}
-.contact-col{background:var(--surface);border:1px solid var(--border2);padding:44px 36px;}
-.contact-col-title{font-size:0.6rem;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--teal-light);margin-bottom:20px;}
-.contact-line{font-size:0.9rem;color:var(--text2);line-height:1.9;}
-.contact-line a{color:var(--text2);text-decoration:none;transition:color 0.3s;}
-.contact-line a:hover{color:var(--teal-light);}
-.contact-line strong{color:var(--text);font-weight:400;}
-.res-btn{display:inline-block;margin-top:28px;font-size:0.65rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--bg);background:var(--teal-light);padding:12px 28px;text-decoration:none;transition:all 0.3s;}
-.res-btn:hover{background:var(--teal-pale);transform:translateY(-1px);}
-
-footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 0;}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal-light);}
-.footer-copy{font-size:0.7rem;color:var(--text3);}
-
-@media(max-width:900px){
-  nav{padding:18px 24px;}nav.scrolled{padding:12px 24px;}.nav-links{display:none;}
-  .hero{padding:120px 24px 60px;}
-  .hero-strip{grid-template-columns:repeat(2,1fr);}
-  .container{padding:0 24px;}section{padding:80px 0;}
-  .manifesto-grid{grid-template-columns:1fr;gap:48px;}
-  .konzept-cards{grid-template-columns:1fr;}
-  .menu-grid{grid-template-columns:1fr;}
-  .nach-inner{grid-template-columns:1fr;}
-  .stats-inner{grid-template-columns:repeat(2,1fr);}
-  .contact-grid{grid-template-columns:1fr;}
-  .footer-inner{flex-direction:column;gap:12px;text-align:center;}
-}
-
-.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
-.animate-on-scroll.animate-in{opacity:1;transform:translateY(0)}
-.animate-on-scroll:nth-child(2){transition-delay:.1s}
-.animate-on-scroll:nth-child(3){transition-delay:.2s}
-.animate-on-scroll:nth-child(4){transition-delay:.3s}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes slideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.gallery-item{aspect-ratio:4/3;border-radius:var(--radius,12px);overflow:hidden;cursor:pointer;position:relative}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.gallery-item:hover img{transform:scale(1.08)}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.review-card{padding:32px;border-radius:var(--radius,12px);position:relative}
-.review-stars{color:#F59E0B;font-size:1.1rem;margin-bottom:12px;letter-spacing:2px}
-.review-text{font-size:.95rem;line-height:1.7;margin-bottom:16px;font-style:italic}
-.review-author{font-weight:600;font-size:.9rem}
-.review-source{font-size:.8rem;opacity:.6;margin-top:2px}
-@media(max-width:768px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.reviews-grid{grid-template-columns:1fr}}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#080A06;--bg-light:#0E110C;--bg-card:#141912;--green:#5A7247;--green-light:#7A9A64;--green-dark:#3E5031;--accent:#A8B89A;--text:#D5DCD0;--text-muted:#8E978A;--text-dim:#5E665A;--white:#F0F4ED;--border:rgba(90,114,71,0.2);--font-display:'Cormorant Garamond',serif;--font-body:'DM Sans',sans-serif}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--green);color:var(--white)}img{max-width:100%;height:auto;display:block}a{color:var(--accent);text-decoration:none;transition:color .3s}a:hover{color:var(--green-light)}
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
+nav.scrolled{background:rgba(8,10,6,.95);backdrop-filter:blur(20px);padding:1rem 3rem;border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--font-display);font-size:1.3rem;color:var(--white);letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.nav-links{display:flex;gap:2.5rem;align-items:center}.nav-links a{font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);font-weight:500}.nav-links a:hover{color:var(--accent)}
+.nav-cta{padding:.6rem 1.8rem;border:1px solid var(--green);color:var(--accent)!important;transition:all .3s}.nav-cta:hover{background:var(--green);color:var(--white)!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer}.nav-toggle span{width:25px;height:1.5px;background:var(--white)}
+.hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80') center/cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,10,6,.95) 0%,rgba(8,10,6,.5) 40%,rgba(8,10,6,.3) 70%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 2rem;max-width:800px}
+.hero-badges{display:flex;gap:1rem;justify-content:center;margin-bottom:2rem;flex-wrap:wrap}
+.hero-badge{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--green-light);border:1px solid var(--green);padding:.4rem 1.2rem}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,6vw,4.5rem);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--green-light)}
+.hero-sub{font-size:1rem;color:var(--text-muted);font-weight:300;max-width:500px;margin:0 auto 2.5rem}
+.btn{display:inline-block;padding:.9rem 2.5rem;border:1px solid var(--green);color:var(--accent);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;transition:all .3s;background:transparent}
+.btn:hover{background:var(--green);color:var(--white)}
+section{padding:7rem 2rem}.container{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:4rem}
+.section-tag{font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--green-light);margin-bottom:1rem;display:block}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--white);line-height:1.2}
+.section-divider{width:60px;height:1px;background:var(--green);margin:1.5rem auto 0}
+.split{background:var(--bg-light)}.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.split-img{overflow:hidden;aspect-ratio:3/4;border:1px solid var(--border)}.split-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.split-img:hover img{transform:scale(1.03)}
+.split-text h3{font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--white);margin-bottom:1.5rem}
+.split-text p{color:var(--text-muted);margin-bottom:1.2rem;font-weight:300;font-size:.95rem}
+.split-quote{font-family:var(--font-display);font-size:1.2rem;font-style:italic;color:var(--green-light);border-left:2px solid var(--green);padding-left:1.5rem;margin-top:2rem;line-height:1.6}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.card{background:var(--bg-card);border:1px solid var(--border);padding:2.5rem;text-align:center;transition:all .4s}.card:hover{border-color:var(--green);transform:translateY(-4px)}
+.card-icon{font-size:2.2rem;margin-bottom:1.2rem}.card h4{font-family:var(--font-display);font-size:1.3rem;color:var(--white);margin-bottom:.8rem}.card p{color:var(--text-muted);font-size:.88rem;font-weight:300}
+.menu-section{background:var(--bg-light)}
+.menu-center{max-width:700px;margin:0 auto}
+.menu-item{padding:1.8rem 0;border-bottom:1px solid var(--border);text-align:center}
+.menu-item-name{font-family:var(--font-display);font-size:1.3rem;color:var(--white)}.menu-item-desc{font-size:.85rem;color:var(--text-dim);margin-top:.4rem;font-weight:300}
+.menu-prices{display:flex;justify-content:center;gap:3rem;margin-top:3rem;flex-wrap:wrap}
+.menu-price{text-align:center;padding:1.5rem 2rem;border:1px solid var(--border)}
+.menu-price strong{font-family:var(--font-display);font-size:1.8rem;color:var(--white);display:block}.menu-price span{font-size:.75rem;color:var(--text-dim);letter-spacing:.15em;text-transform:uppercase;margin-top:.3rem;display:block}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:250px 250px;gap:1rem}
+.gallery-item{overflow:hidden}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item:nth-child(1){grid-row:span 2}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.contact-info h3{font-family:var(--font-display);font-size:1.8rem;color:var(--white);margin-bottom:2rem}
+.contact-item{margin-bottom:1.8rem}.contact-item span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green-light);display:block;margin-bottom:.4rem}
+.contact-item p,.contact-item a{color:var(--text-muted);font-size:.95rem;font-weight:300;display:block}
+.contact-map{border:1px solid var(--border);overflow:hidden;min-height:400px}.contact-map iframe{width:100%;height:100%;min-height:400px;border:0;filter:grayscale(.4) contrast(1.05)}
+footer{border-top:1px solid var(--border);padding:3rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-brand{font-family:var(--font-display);font-size:1rem;color:var(--white);letter-spacing:.1em}.footer-links{display:flex;gap:2rem}.footer-links a{font-size:.78rem;color:var(--text-dim)}
+.footer-copy{font-size:.75rem;color:var(--text-dim);text-align:center;width:100%;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+@media(max-width:968px){
+.nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(8,10,6,.98);flex-direction:column;justify-content:center;align-items:center;gap:2rem}
+.nav-links.active{display:flex}.nav-toggle{display:flex}
+.split-grid,.contact-grid{grid-template-columns:1fr}.cards-grid{grid-template-columns:1fr}
+.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gallery-item:nth-child(1){grid-row:span 1}
+section{padding:5rem 1.5rem}}
+@media(max-width:600px){nav{padding:1rem 1.5rem}.gallery-grid{grid-template-columns:1fr}.hero-badges{flex-direction:column;align-items:center}}
 </style>
 </head>
 <body>
-
-<nav id="nav">
-  <a href="#" class="nav-logo">
-    Seven Swans
-    <span>★ Michelin · 🌿 Grüner Stern · Frankfurt am Main</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#manifesto">Philosophie</a></li>
-    <li><a href="#menu">Menü</a></li>
-    <li><a href="#nachhaltigkeit">Nachhaltigkeit</a></li>
-    <li><a href="#contact">Kontakt</a></li>
-  </ul>
-  <a href="tel:+496921996226" class="nav-cta">Reservieren</a>
+<nav id="navbar">
+<a href="#" class="nav-logo">Seven Swans</a>
+<div class="nav-links" id="navLinks">
+<a href="#philosophie">Philosophie</a>
+<a href="#erlebnis">Erlebnis</a>
+<a href="#menue">Menü</a>
+<a href="#galerie">Galerie</a>
+<a href="#kontakt">Kontakt</a>
+<a href="#kontakt" class="nav-cta">Reservieren</a>
+</div>
+<div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')"><span></span><span></span><span></span></div>
 </nav>
 
 <section class="hero">
-  <div class="hero-watermark">7</div>
-  <div class="hero-badges">
-    <div class="hero-badge badge-michelin">★ Michelin-Stern · Frankfurt</div>
-    <div class="hero-badge badge-green">🌿 Grüner Michelin-Stern · Nachhaltigkeit</div>
-  </div>
-  <h1 class="hero-title">Seven <em>Swans</em></h1>
-  <p class="hero-sub">Frankfurts schmalstestes Haus am Mainkai — mit dem ersten rein veganen Michelin-Stern-Restaurant Deutschlands. Ricky Saward kocht Natur.</p>
-  <div class="hero-actions">
-    <a href="tel:+496921996226" class="btn-primary">Tisch reservieren</a>
-    <a href="#menu" class="btn-secondary">Menü ansehen</a>
-  </div>
-  <div class="hero-strip">
-    <div class="hero-strip-item">
-      <div class="strip-val">★ 🌿</div>
-      <div class="strip-lbl">Michelin + Grüner Stern</div>
-    </div>
-    <div class="hero-strip-item">
-      <div class="strip-val">100%</div>
-      <div class="strip-lbl">Pflanzliche Küche</div>
-    </div>
-    <div class="hero-strip-item">
-      <div class="strip-val">Di–Sa</div>
-      <div class="strip-lbl">Ab 18:30 Uhr</div>
-    </div>
-    <div class="hero-strip-item">
-      <div class="strip-val">Main</div>
-      <div class="strip-lbl">Mainkai 4 · Altstadt</div>
-    </div>
-  </div>
-</section>
-
-<section class="manifesto" id="manifesto">
-  <div class="container">
-    <div class="manifesto-grid">
-      <div>
-        <div class="section-eyebrow">Philosophie</div>
-        <h2 class="section-title">Rein <em>pflanzlich</em>.<br>Rein <em>brilliant</em>.</h2>
-        <div class="divider"></div>
-        <div class="manifesto-text">
-          <p>Das Seven Swans ist mehr als ein Restaurant — es ist eine Haltung. In Frankfurts schmalstestem Gebäude, direkt am Mainkai, kocht Ricky Saward eine Küche, die zeigt: Pflanzlich ist nicht Verzicht. Es ist Überfluss.</p>
-          <p>100% vegan, 100% regional, 100% saisonal. Kein Kompromiss. Die Produkte kommen von kleinen Höfen und Gärten aus der Region — oft vom eigenen Garten des Restaurants.</p>
-          <p>Der Michelin-Stern und der Grüne Michelin-Stern für Nachhaltigkeit sind Anerkennung für eine Küche, die Natur nicht nur respektiert, sondern feiert.</p>
-        </div>
-      </div>
-      <div>
-        <div class="manifesto-quote">
-          Pflanzen sind nicht die zweite Wahl. Sie sind die erste.
-          <div class="manifesto-chef">— Ricky Saward, Küchenchef</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="konzept" id="konzept">
-  <div class="container">
-    <div class="section-eyebrow">Das Konzept</div>
-    <h2 class="section-title">Drei <em>Prinzipien</em></h2>
-    <div class="konzept-cards">
-      <div class="konzept-card">
-        <div class="konzept-num">01</div>
-        <div class="konzept-title">100% Vegan</div>
-        <div class="konzept-text">Kein Fleisch, kein Fisch, keine tierischen Produkte — nicht aus Mangel, sondern aus Überzeugung. Das Seven Swans beweist, dass vegane Haute Cuisine mit jedem Sterne-Restaurant mithalten kann.</div>
-      </div>
-      <div class="konzept-card">
-        <div class="konzept-num">02</div>
-        <div class="konzept-title">Regional & Saisonal</div>
-        <div class="konzept-text">Alle Zutaten kommen aus der Region — von kleinen Höfen, aus dem eigenen Garten, von Produzenten, die Ricky Saward persönlich kennt. Die Karte wechselt täglich mit dem, was die Natur gerade anbietet.</div>
-      </div>
-      <div class="konzept-card">
-        <div class="konzept-num">03</div>
-        <div class="konzept-title">Mainkai & Atmosphäre</div>
-        <div class="konzept-text">Das schmale Fachwerkhaus am Mainkai ist einzigartig in Frankfurt. Über mehrere Etagen verteilt, mit Blick auf den Main — ein intimes Erlebnis, das zum Konzept passt: nah, ehrlich, unvergesslich.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="menu-section" id="menu">
-  <div class="container">
-    <div class="section-eyebrow">Dégustationsmenüs</div>
-    <h2 class="section-title">Natur auf dem <em>Teller</em></h2>
-    <div class="menu-grid">
-      <div class="menu-card">
-        <div class="menu-name">Seven Swans Kurzmenü</div>
-        <div class="menu-sub">Vollständig vegan · 5 Gänge</div>
-        <ul class="menu-courses">
-          <li>Snacks aus dem Garten</li>
-          <li>Saisonales Gemüse · Kräuter · Nuss</li>
-          <li>Hauptgang pflanzlich · täglich wechselnd</li>
-          <li>Vor-Dessert</li>
-          <li>Dessert · Petits Fours</li>
-        </ul>
-        <div class="menu-price">€ 135</div>
-      </div>
-      <div class="menu-card featured">
-        <div class="menu-name">Seven Swans Grand Menu</div>
-        <div class="menu-sub">Vollständig vegan · 8 Gänge</div>
-        <ul class="menu-courses">
-          <li>Snacks · Kräuterinstallation</li>
-          <li>Fermente · Eingelegtes · Rohes</li>
-          <li>Erster warmer Gang · Wurzelgemüse</li>
-          <li>Pilze · Wald · Erde</li>
-          <li>Herzstück · täglich neu interpretiert</li>
-          <li>Käse vegan (Cashew-Reifung)</li>
-          <li>Vor-Dessert · Kräutereis</li>
-          <li>Dessert · Mignardises</li>
-        </ul>
-        <div class="menu-price">€ 195</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="nachhaltigkeit" id="nachhaltigkeit">
-  <div class="container">
-    <div class="nach-inner">
-      <div class="nach-icon">🌿</div>
-      <div>
-        <div class="nach-title">Grüner Michelin-Stern für Nachhaltigkeit</div>
-        <div class="nach-text">Das Seven Swans ist eines der wenigen deutschen Restaurants, das sowohl einen Michelin-Stern als auch den Grünen Stern für außergewöhnliches Engagement in nachhaltiger Gastronomie trägt. Eigener Garten, Zero Waste, ausschließlich regionale Produzenten — Nachhaltigkeit ist hier kein Marketing, sondern gelebte Praxis.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="stats-bar">
-  <div class="container">
-    <div class="stats-inner">
-      <div class="stat-item"><span class="stat-num">★</span><span class="stat-lbl">Michelin-Stern</span></div>
-      <div class="stat-item"><span class="stat-num">🌿</span><span class="stat-lbl">Grüner Michelin-Stern</span></div>
-      <div class="stat-item"><span class="stat-num">100%</span><span class="stat-lbl">Vegane Küche</span></div>
-      <div class="stat-item"><span class="stat-num">Di–Sa</span><span class="stat-lbl">Ab 18:30 Uhr</span></div>
-    </div>
-  </div>
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="hero-badges">
+<span class="hero-badge">&#9733; Michelin Stern</span>
+<span class="hero-badge">&#127807; Green Star</span>
 </div>
-
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="section-eyebrow">Reservierung</div>
-    <h2 class="section-title">Am <em>Mainkai</em></h2>
-    <div class="contact-grid">
-      <div class="contact-col">
-        <div class="contact-col-title">Adresse</div>
-        <div class="contact-line">
-          <strong>Seven Swans</strong><br>
-          Mainkai 4<br>
-          60311 Frankfurt am Main<br>
-          <br>
-          Altstadt · direkt am Main<br>
-          Frankfurts schmalstestes Haus
-        </div>
-      </div>
-      <div class="contact-col">
-        <div class="contact-col-title">Öffnungszeiten</div>
-        <div class="contact-line">
-          <strong>Dienstag – Samstag</strong><br>
-          18:30 – 00:00 Uhr<br>
-          <br>
-          Montag & Sonntag geschlossen<br>
-          <br>
-          Nur mit Reservierung
-        </div>
-        <a href="tel:+496921996226" class="res-btn">069 219 96 226</a>
-      </div>
-      <div class="contact-col">
-        <div class="contact-col-title">Kontakt</div>
-        <div class="contact-line">
-          <strong>Telefon</strong><br>
-          <a href="tel:+496921996226">069 219 96 226</a><br>
-          <br>
-          <strong>Küchenchef</strong><br>
-          Ricky Saward<br>
-          <br>
-          <strong>Konzept</strong><br>
-          100% Vegan · Regional · Saisonal
-        </div>
-      </div>
-    </div>
-  </div>
+<h1>Pflanze trifft <em>Perfektion</em></h1>
+<p class="hero-sub">Frankfurts erstes veganes Sternerestaurant. Radikal saisonal, kompromisslos nachhaltig. Eine kulinarische Revolution am Main.</p>
+<a href="#menue" class="btn">Surprise Menü</a>
+</div>
 </section>
 
-
-<section id="galerie" class="alt-bg" style="padding:100px 0">
+<section class="split" id="philosophie">
 <div class="container">
-<div class="section-header center">
-<div class="section-label">Galerie</div>
-<h2 class="section-title">Impressionen</h2>
+<div class="split-grid">
+<div class="split-img">
+<img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Veganes Fine Dining" loading="lazy">
+</div>
+<div class="split-text">
+<span class="section-tag">Philosophie</span>
+<h3>Radikal pflanzlich, radikal gut</h3>
+<p>Im schmälsten Haus Frankfurts am Mainkai 4 hat Ricky Saward etwas geschaffen, das es so nirgendwo sonst gibt: Ein rein veganes Sternerestaurant, das beweist, dass pflanzliche Küche auf allerhöchstem Niveau funktioniert.</p>
+<p>Alles kommt aus eigenem Anbau oder von regionalen Erzeugern. Keine Kompromisse bei Qualität, keine bei Nachhaltigkeit. Ausgezeichnet mit dem Michelin Stern und dem Michelin Green Star für besonderes Engagement in nachhaltiger Gastronomie.</p>
+<div class="split-quote">
+Wir zeigen, dass pflanzliche Küche nicht Verzicht bedeutet, sondern eine neue Dimension des Geschmacks eröffnet.
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="erlebnis">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Das Erlebnis</span>
+<h2 class="section-title">Mehr als ein Dinner</h2>
+<div class="section-divider"></div>
+</div>
+<div class="cards-grid">
+<div class="card"><div class="card-icon">&#127807;</div><h4>Farm to Table</h4><p>Eigene Gärten und regionale Partner liefern die Zutaten. Jedes Produkt hat eine Geschichte, jeder Gang erzählt von der Saison.</p></div>
+<div class="card"><div class="card-icon">&#9733;</div><h4>Surprise Menü</h4><p>Ein mehrgängiges Überraschungsmenü, das sich täglich ändert. Ricky Saward und sein Team lassen sich von dem inspirieren, was die Natur gerade bietet.</p></div>
+<div class="card"><div class="card-icon">&#127863;</div><h4>Getränkebegleitung</h4><p>Weinbegleitung oder alkoholfreies Pairing &mdash; beide Optionen sind mit derselben Sorgfalt zusammengestellt und auf jeden Gang abgestimmt.</p></div>
+</div>
+</div>
+</section>
+
+<section class="menu-section" id="menue">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Menü</span>
+<h2 class="section-title">Das Surprise Menü</h2>
+<div class="section-divider"></div>
+</div>
+<div class="menu-center">
+<div class="menu-item"><div class="menu-item-name">Amuse-Bouche</div><div class="menu-item-desc">Saisonale Kleinigkeiten aus dem Garten</div></div>
+<div class="menu-item"><div class="menu-item-name">Wurzelgemüse</div><div class="menu-item-desc">Fermentiert, geröstet, als Essenz</div></div>
+<div class="menu-item"><div class="menu-item-name">Waldpilze</div><div class="menu-item-desc">Verschiedene Texturen, Kräuteröl, Nuss</div></div>
+<div class="menu-item"><div class="menu-item-name">Kohl &amp; Getreide</div><div class="menu-item-desc">Alte Sorten, Miso, geröstete Hefe</div></div>
+<div class="menu-item"><div class="menu-item-name">Dessert</div><div class="menu-item-desc">Obst der Saison, florale Noten, Kräuter</div></div>
+</div>
+<div class="menu-prices">
+<div class="menu-price"><strong>229 &euro;</strong><span>Surprise Menü</span></div>
+<div class="menu-price"><strong>119 &euro;</strong><span>Weinbegleitung</span></div>
+<div class="menu-price"><strong>99 &euro;</strong><span>Alkoholfrei</span></div>
+</div>
+</div>
+</section>
+
+<section id="galerie">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Impressionen</span>
+<h2 class="section-title">Einblicke</h2>
+<div class="section-divider"></div>
 </div>
 <div class="gallery-grid">
-<div class="gallery-item animate-on-scroll"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Impressionen" loading="lazy"></div>
-<div class="gallery-item animate-on-scroll"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&q=80" alt="Impressionen" loading="lazy"></div>
-<div class="gallery-item animate-on-scroll"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80" alt="Impressionen" loading="lazy"></div>
-<div class="gallery-item animate-on-scroll"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=800&q=80" alt="Impressionen" loading="lazy"></div>
-<div class="gallery-item animate-on-scroll"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="Impressionen" loading="lazy"></div>
-<div class="gallery-item animate-on-scroll"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80" alt="Impressionen" loading="lazy"></div>
+<div class="gallery-item"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Atmosphäre" loading="lazy"></div>
+<div class="gallery-item"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80" alt="Pflanzliches Dessert" loading="lazy"></div>
+<div class="gallery-item"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80" alt="Dining" loading="lazy"></div>
+<div class="gallery-item"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80" alt="Getränke" loading="lazy"></div>
+<div class="gallery-item"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=600&q=80" alt="Ambiente" loading="lazy"></div>
 </div>
 </div>
 </section>
 
-<section id="bewertungen" style="padding:100px 0">
+<section class="split" id="kontakt">
 <div class="container">
-<div class="section-header center">
-<div class="section-label">Bewertungen</div>
-<h2 class="section-title">Das sagen unsere Kunden</h2>
-<p class="section-desc">Überzeugen Sie sich selbst von der Qualität unserer Arbeit.</p>
+<div class="section-header">
+<span class="section-tag">Kontakt &amp; Reservierung</span>
+<h2 class="section-title">Ihr Tisch am Main</h2>
+<div class="section-divider"></div>
 </div>
-<div class="reviews-grid">
-<div class="review-card animate-on-scroll" style="background:var(--bg-soft,#f8f9fc);border:1px solid var(--border,#e8eaef)">
-<div class="review-stars">★★★★★</div>
-<p class="review-text">„Hervorragendes Essen und ein wunderbarer Service. Wir kommen definitiv wieder!“</p>
-<div class="review-author">M. Schmidt</div>
-<div class="review-source">Google Bewertung</div>
+<div class="contact-grid">
+<div class="contact-info">
+<h3>Seven Swans</h3>
+<div class="contact-item"><span>Adresse</span><p>Mainkai 4<br>60311 Frankfurt am Main</p></div>
+<div class="contact-item"><span>Öffnungszeiten</span><p>Dienstag &ndash; Samstag: 18:30 &ndash; 01:00 Uhr<br>Sonntag &amp; Montag: Ruhetag</p></div>
+<div class="contact-item"><span>Telefon</span><a href="tel:+496921996226">+49 (0) 69 219 962 26</a></div>
+<div class="contact-item"><span>E-Mail</span><a href="mailto:service@sevenswans.de">service@sevenswans.de</a></div>
+<div class="contact-item"><span>Geschäftsführer</span><p>Ricky Saward</p></div>
+<a href="https://sevenswans.de/reservation.html" target="_blank" class="btn" style="margin-top:1rem">Reservieren</a>
 </div>
-<div class="review-card animate-on-scroll" style="background:var(--bg-soft,#f8f9fc);border:1px solid var(--border,#e8eaef)">
-<div class="review-stars">★★★★★</div>
-<p class="review-text">„Die Atmosphäre ist einzigartig. Perfekt für besondere Anlässe.“</p>
-<div class="review-author">K. Weber</div>
-<div class="review-source">TripAdvisor Bewertung</div>
-</div>
-<div class="review-card animate-on-scroll" style="background:var(--bg-soft,#f8f9fc);border:1px solid var(--border,#e8eaef)">
-<div class="review-stars">★★★★★</div>
-<p class="review-text">„Eines der besten Restaurants der Stadt. Die Weinauswahl ist erstklassig.“</p>
-<div class="review-author">L. Fischer</div>
-<div class="review-source">Google Bewertung</div>
+<div class="contact-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.8!2d8.6820!3d50.1070!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0ea1c8a1b6fd%3A0x6e3de63c29d8c9a0!2sSeven%20Swans!5e0!3m2!1sde!2sde!4v1" allowfullscreen loading="lazy"></iframe>
 </div>
 </div>
 </div>
 </section>
+
 <footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-logo">Seven Swans · ★ Michelin · 🌿 Grüner Stern</div>
-      <div class="footer-copy">Mainkai 4 · 60311 Frankfurt am Main · 069 219 96 226</div>
-    </div>
-  </div>
+<div class="footer-inner">
+<div class="footer-brand">Seven Swans</div>
+<div class="footer-links">
+<a href="https://sevenswans.de" target="_blank">Website</a>
+<a href="https://www.instagram.com/sevenswansfrankfurt/" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/SEVENSWANSFRANKFURT" target="_blank">Facebook</a>
+</div>
+<div class="footer-copy">&copy; 2025 Seven Swans is Dead GmbH &middot; Frankfurt am Main</div>
+</div>
 </footer>
 
 <script>
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  var toggle=document.querySelector('.mobile-toggle');
-  var nav=document.querySelector('.nav-links');
-  if(toggle&&nav){toggle.addEventListener('click',function(){nav.classList.toggle('open');toggle.classList.toggle('active')})}
-  var observer=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('animate-in');observer.unobserve(e.target)}})
-  },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-  document.querySelectorAll('.animate-on-scroll').forEach(function(el){observer.observe(el)});
-  var navbar=document.querySelector('nav');
-  window.addEventListener('scroll',function(){
-    var st=window.scrollY;
-    if(navbar){if(st>50)navbar.classList.add('scrolled');else navbar.classList.remove('scrolled')}
-  });
-  document.querySelectorAll('.counter').forEach(function(counter){
-    var obs2=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          var target=+e.target.dataset.target;
-          var suffix=e.target.dataset.suffix||'';
-          var dur=1500;var start=performance.now();
-          var animate=function(now){
-            var elapsed=now-start;var progress=Math.min(elapsed/dur,1);
-            var eased=1-Math.pow(1-progress,3);
-            e.target.textContent=Math.round(target*eased).toLocaleString('de-DE');
-            if(progress<1)requestAnimationFrame(animate);
-            else e.target.textContent=target.toLocaleString('de-DE')+suffix;
-          };
-          requestAnimationFrame(animate);obs2.unobserve(e.target);
-        }
-      });
-    },{threshold:0.5});
-    obs2.observe(counter);
-  });
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click',function(e){
-      e.preventDefault();
-      var target=document.querySelector(a.getAttribute('href'));
-      if(target){target.scrollIntoView({behavior:'smooth',block:'start'})}
-      if(nav&&nav.classList.contains('open')){nav.classList.remove('open');if(toggle)toggle.classList.remove('active')}
-    });
-  });
-  var hero=document.querySelector('.hero-img,.hero-visual,.hero');
-  if(hero&&window.innerWidth>768){
-    window.addEventListener('scroll',function(){
-      var st=window.scrollY;
-      if(st<800){hero.style.transform='translateY('+st*0.15+'px)'}
-    });
-  }
-  document.querySelectorAll('.gallery-item').forEach(function(item){
-    item.addEventListener('click',function(){
-      var img=item.querySelector('img');
-      if(!img)return;
-      var src=img.src;
-      var overlay=document.createElement('div');
-      overlay.className='lightbox-overlay';
-      overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:10000;display:flex;align-items:center;justify-content:center;cursor:pointer;animation:fadeIn .3s';
-      var content=document.createElement('div');
-      content.className='lightbox-content';
-      var lbImg=document.createElement('img');
-      lbImg.src=src;
-      lbImg.alt='Gallery';
-      lbImg.style.cssText='max-width:90vw;max-height:85vh;border-radius:8px;object-fit:contain';
-      var closeBtn=document.createElement('button');
-      closeBtn.className='lightbox-close';
-      closeBtn.textContent='\u00D7';
-      closeBtn.style.cssText='position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:2.5rem;cursor:pointer;line-height:1';
-      content.appendChild(lbImg);
-      content.appendChild(closeBtn);
-      overlay.appendChild(content);
-      overlay.addEventListener('click',function(){overlay.remove()});
-      document.body.appendChild(overlay);
-    });
-  });
-  var btt=document.createElement('button');
-  btt.textContent='\u2191';
-  btt.className='back-to-top';
-  btt.style.cssText='position:fixed;bottom:32px;right:32px;width:48px;height:48px;border-radius:50%;border:none;background:var(--accent,#333);color:#fff;font-size:1.2rem;cursor:pointer;opacity:0;transform:translateY(20px);transition:all .3s;z-index:9000;box-shadow:0 4px 20px rgba(0,0,0,.2)';
-  document.body.appendChild(btt);
-  btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
-  window.addEventListener('scroll',function(){
-    if(window.scrollY>600){btt.style.opacity='1';btt.style.transform='translateY(0)'}
-    else{btt.style.opacity='0';btt.style.transform='translateY(20px)'}
-  });
-});
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>80)});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth'});document.getElementById('navLinks').classList.remove('active')}})});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:.1});
+document.querySelectorAll('.container,.section-header').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity .8s ease,transform .8s ease';obs.observe(el)});
 </script>
 </body>
 </html>
